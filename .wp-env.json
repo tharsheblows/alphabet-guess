@@ -7,5 +7,5 @@
 	},
 	"phpVersion": "8.2",
 	"core": "https://wordpress.org/wordpress-6.5.zip",
-  "plugins": [ "." ]
+	"plugins": [ "." ]
 }
