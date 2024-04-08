@@ -1,0 +1,10 @@
+parameters:
+  level: 7
+  checkMissingIterableValueType: false
+  reportUnmatchedIgnoredErrors: false
+  paths:
+    - includes/
+  ignoreErrors:
+    -
+      message: '#PHPDoc tag @return contains unresolvable type.#'
+      path: php/components/class-styles.php

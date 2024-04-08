@@ -1,0 +1,7 @@
+
+{
+  "*.php": [ "npm run lint:phpcs", "npm run lint:phpstan" ],
+  "*.{js,jsx}": [ "npm run lint:js" ],
+  "*.scss": [ "npm run lint:css" ],
+  "*.md": [ "npm run lint:md:docs"]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "tharsheblows/alphabet-guess",
+  "authors": [
+    {
+      "name": "JJ",
+      "email": "jjjay@mac.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Tharsheblows\\AlphabetGuess\\": "includes/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "require-dev": {
+    "wp-coding-standards/wpcs": "^3.0",
+    "phpstan/phpstan": "^1.10",
+    "phpcompatibility/php-compatibility": "^9.3",
+    "phpcompatibility/phpcompatibility-wp": "^2.1"
+  },
+  "scripts": {
+    "lint:phpcs": "phpcs",
+    "lint:phpstan": "phpstan analyse --memory-limit=1024M",
+    "format": "phpcbf"
+  }
+}
