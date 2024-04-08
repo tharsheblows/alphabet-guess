@@ -18,5 +18,6 @@ class Hooks {
 	 * @return void
 	 */
 	public static function init(): void {
+		add_action( 'rest_api_init', [ 'Tharsheblows\AlphabetGuess\RestAlphabet', 'register_route' ] );
 	}
 }

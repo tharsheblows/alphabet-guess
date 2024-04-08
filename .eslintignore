@@ -1,0 +1,4 @@
+tools/wordpress
+build
+vendor
+node_modules

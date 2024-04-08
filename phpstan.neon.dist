@@ -4,7 +4,5 @@ parameters:
   reportUnmatchedIgnoredErrors: false
   paths:
     - includes/
-  ignoreErrors:
-    -
-      message: '#PHPDoc tag @return contains unresolvable type.#'
-      path: php/components/class-styles.php
+  scanDirectories:
+    - tools/wordpress

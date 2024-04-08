@@ -17,6 +17,7 @@
 		<exclude name="Generic.Commenting.DocComment.MissingShort" />
 		<exclude name="PSR2.Classes.PropertyDeclaration.Underscore" />
 		<exclude name="WordPress.Files.FileName.InvalidClassFileName" />
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
 	</rule>
 
 	<!-- Force short array syntax -->
