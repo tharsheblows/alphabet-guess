@@ -21,8 +21,10 @@
 		"lint:md:docs": "wp-scripts lint-md-docs",
 		"format:md:docs": "npm run lint:md:docs -- --fix",
 		"packages-update": "wp-scripts packages-update",
-		"dev": "wp-scripts start --experimental-modules",
-		"start": "wp-env start",
+    "dev": "concurrently \"npm run dev:blocks\" \"npm run dev:css\"",
+		"dev:blocks": "wp-scripts start --experimental-modules",
+    "dev:css": "wp-scripts start src/index.js",
+		"start": "wp-env start --xdebug",
 		"stop-all": "docker stop $(docker ps --all --quiet)",
 		"test:e2e": "wp-scripts test-e2e",
 		"test:unit": "wp-scripts test-unit-js"
@@ -30,6 +32,7 @@
 	"devDependencies": {
 		"@wordpress/env": "^9.7.0",
 		"@wordpress/scripts": "^27.6.0",
+		"concurrently": "^8.2.2",
 		"lint-staged": "^15.2.2",
 		"npm-run-all": "^4.1.5",
 		"postcss-preset-env": "^9.5.4",

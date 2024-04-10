@@ -3,9 +3,9 @@
  */
 import { store, getContext } from '@wordpress/interactivity';
 
-store( 'create-block', {
+store( 'alphabet-guess', {
 	actions: {
-		toggle: () => {
+		markAsUsed: () => {
 			const context = getContext();
 			context.isOpen = ! context.isOpen;
 		},

@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Site Debug: Xdebug V3",
+      "type": "php",
+      "request": "launch",
+      "port": 9003,
+      "pathMappings": {
+        "/var/www/html/wp-content/plugins/alphabet-guess": "${workspaceFolder}",
+        "/var/www/html": "${workspaceFolder}/tools/wordpress"
+      }
+    }
+  ]
+}

@@ -13,29 +13,35 @@
  */
 
 // Generate unique id for aria-controls.
-$unique_id = wp_unique_id( 'p-' );
+$unique_id  = wp_unique_id( 'a-' );
+$characters = apply_filters( 'alphabet_guess_characters', range( 'A', 'Z' ) );
 ?>
 
 <div
 	<?php echo esc_html( get_block_wrapper_attributes() ); ?>
-	data-wp-interactive="create-block"
-	<?php echo esc_html( wp_interactivity_data_wp_context( [ 'isOpen' => false ] ) ); ?>
-	data-wp-watch="callbacks.logIsOpen"
+	data-wp-interactive="alphabet-guess"
+	<?php echo wp_interactivity_data_wp_context( [ 'characters' => $characters ] ); // phpcs:ignore ?>
+	data-wp-watch="callbacks.markUsedLetter"
 >
 	<button
-		data-wp-on--click="actions.toggle"
-		data-wp-bind--aria-expanded="context.isOpen"
+		data-wp-on--click="actions.markAsUsed"
 		aria-controls="<?php echo esc_attr( $unique_id ); ?>"
 	>
-		<?php esc_html_e( 'Toggle', 'tharsheblows-alphabet-guess' ); ?>
+		<?php esc_html_e( 'Show Characters', 'tharsheblows-alphabet-guess' ); ?>
 	</button>
 
-	<p
+	<div
 		id="<?php echo esc_attr( $unique_id ); ?>"
-		data-wp-bind--hidden="!context.isOpen"
+		class="ag-characters__list"
 	>
 		<?php
-			esc_html_e( 'Characters - hello from an interactive block!', 'tharsheblows-alphabet-guess' );
+		foreach ( $characters as $character ) {
+			?>
+					<div class="ag-characters__item">
+					<?php echo esc_html( $character ); ?>
+					</div>
+				<?php
+		}
 		?>
-	</p>
+	</ul>
 </div>

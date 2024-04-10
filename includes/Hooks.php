@@ -21,9 +21,6 @@ class Hooks {
 	 */
 	public static function init(): void {
 
-		// Add the alphabet endpoint.
-		add_action( 'rest_api_init', [ 'Tharsheblows\AlphabetGuess\RestAlphabet', 'register_route' ] );
-
 		// Register all of the blocks.
 		$blocks = new Blocks();
 		add_action( 'init', [ $blocks,'register_blocks' ] );
