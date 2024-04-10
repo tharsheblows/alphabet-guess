@@ -4,5 +4,11 @@ parameters:
   reportUnmatchedIgnoredErrors: false
   paths:
     - includes/
-  scanDirectories:
-    - tools/wordpress
+    - src/blocks/
+  excludePaths:
+    analyseAndScan:
+      - blocks/*/node_modules/*
+      - blocks/*/build/*
+  bootstrapFiles:
+    - plugin.php
+    - tools/wordpress/wp-includes/interactivity-api/interactivity-api.php

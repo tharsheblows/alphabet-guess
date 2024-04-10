@@ -27,5 +27,8 @@ use Tharsheblows\AlphabetGuess\Hooks;
 
 require 'vendor/autoload.php';
 
+define( 'PLUGIN_PATH', \plugin_dir_path( __FILE__ ) );
+define( 'PLUGIN_URL', \plugin_dir_url( __FILE__ ) );
+
 // Add all hooks.
 Hooks::init();

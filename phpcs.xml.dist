@@ -5,8 +5,14 @@
 	<arg name="parallel" value="16" />
 	<arg value="sp" />
 
-	<!-- Lint /includes -->
+	<!-- Include -->
 	<file>./includes</file>
+	<file>./src/blocks</file>
+
+	<!-- Exclude -->
+	<exclude-pattern>node_modules</exclude-pattern>
+	<exclude-pattern>build</exclude-pattern>
+	<exclude-pattern>vendor</exclude-pattern>
 
 	<!-- Ensure all code works with PHP 8.2 and above. -->
 	<rule ref="PHPCompatibilityWP" />
