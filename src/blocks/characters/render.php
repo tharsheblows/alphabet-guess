@@ -21,27 +21,19 @@ $characters = apply_filters( 'alphabet_guess_characters', range( 'A', 'Z' ) );
 	<?php echo esc_html( get_block_wrapper_attributes() ); ?>
 	data-wp-interactive="alphabet-guess"
 	<?php echo wp_interactivity_data_wp_context( [ 'characters' => $characters ] ); // phpcs:ignore ?>
-	data-wp-watch="callbacks.markUsedLetter"
 >
-	<button
-		data-wp-on--click="actions.markAsUsed"
-		aria-controls="<?php echo esc_attr( $unique_id ); ?>"
-	>
-		<?php esc_html_e( 'Show Characters', 'tharsheblows-alphabet-guess' ); ?>
-	</button>
-
 	<div
 		id="<?php echo esc_attr( $unique_id ); ?>"
 		class="ag-characters__list"
 	>
-		<?php
-		foreach ( $characters as $character ) {
-			?>
-					<div class="ag-characters__item">
-					<?php echo esc_html( $character ); ?>
-					</div>
-				<?php
-		}
-		?>
+		<template data-wp-each="context.characters" >
+					<button
+						class="ag-characters__item"
+						data-wp-on--click="actions.guessCharacter"
+						data-wp-text="context.item"
+					>
+					</button>
+		</template>
+
 	</ul>
 </div>

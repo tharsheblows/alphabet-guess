@@ -1,21 +1,18 @@
 /**
  * WordPress dependencies
  */
-import { store, getContext } from '@wordpress/interactivity';
+import { store, getContext, getElement } from '@wordpress/interactivity';
 
 store( 'alphabet-guess', {
 	actions: {
-		markAsUsed: () => {
+		guessCharacter: () => {
 			const context = getContext();
-			context.isOpen = ! context.isOpen;
-		},
-	},
-	callbacks: {
-		logIsOpen: () => {
-			const { isOpen } = getContext();
-			// Log the value of `isOpen` each time it changes.
-			// eslint-disable-next-line
-			console.log( `Is open: ${ isOpen }` );
+			const { ref } = getElement();
+
+			const characterIndex = context.characters.indexOf( ref.innerText );
+			if ( characterIndex > -1 ) {
+				context.characters.splice( characterIndex, 1 );
+			}
 		},
 	},
 } );
