@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "alphabet-guess/controller",
+  "version": "0.1.0",
+  "title": "Alphabet Guess Controller",
+  "keywords": ["alphabet", "guess", "game", "characters", "letters", "controller"],
+  "category": "widgets",
+  "icon": "media-interactive",
+  "description": "The block with the guess",
+  "example": {},
+  "supports": {
+    "interactivity": true
+  },
+  "attributes": {
+    "win": {
+      "type": "string",
+      "default": "You win!"
+    },
+    "lose": {
+      "type": "string",
+      "default": "You lose!"
+    },
+    "winColor": {
+      "type": "string",
+      "color": "#32CD32"
+    },
+    "loseColor": {
+      "type": "string",
+      "color": "#FF0000"
+    }
+  },
+  "textdomain": "characters",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScriptModule": "file:./view.js"
+}

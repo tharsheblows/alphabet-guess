@@ -24,7 +24,7 @@
 	}
 
 	&__item--chosen {
-		border-color: var(--color-grey-light);
+		border: 0;
 		background: var(--color-grey-light);
 		color: var(--color-grey-medium);
 		transition: all 0.5s;

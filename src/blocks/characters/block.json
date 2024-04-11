@@ -3,10 +3,11 @@
 	"apiVersion": 3,
 	"name": "alphabet-guess/characters",
 	"version": "0.1.0",
-	"title": "Characters",
+	"title": "Alphabet Guess Characters",
+  "keywords": [ "alphabet", "guess", "game", "characters", "letters"],
 	"category": "widgets",
 	"icon": "media-interactive",
-	"description": "An interactive block with the Interactivity API",
+	"description": "The block with the interactive character chooser",
 	"example": {},
 	"supports": {
 		"interactivity": true

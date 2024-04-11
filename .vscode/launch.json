@@ -8,6 +8,7 @@
       "port": 9003,
       "pathMappings": {
         "/var/www/html/wp-content/plugins/alphabet-guess": "${workspaceFolder}",
+        "/var/www/html/wp-content/plugins/alphabet-guess/build": "${workspaceFolder}/src",
         "/var/www/html": "${workspaceFolder}/tools/wordpress"
       }
     }

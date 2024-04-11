@@ -25,6 +25,7 @@ class Blocks {
 		// Add your blocks by directory name  here, you don't have to add them all.
 		$blocks = [
 			'characters',
+			'controller',
 		];
 
 		foreach ( $blocks as $block ) {
