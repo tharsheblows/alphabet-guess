@@ -1,12 +1,15 @@
 /**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
+ * Front end and admin styles.
  */
-@import "../../css/variables";
 
 .ag-controller {
+	&__wrapper {
+		width: 100%;
+		margin-block-start: 1em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
 	&__results {
 		display: flex;

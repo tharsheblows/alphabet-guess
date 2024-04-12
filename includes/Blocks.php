@@ -24,8 +24,9 @@ class Blocks {
 	public function register_blocks(): void {
 		// Add your blocks by directory name  here, you don't have to add them all.
 		$blocks = [
-			'characters',
-			'controller',
+			'alphabet-guess/characters',
+			'alphabet-guess/game',
+			'alphabet-guess/controller',
 		];
 
 		foreach ( $blocks as $block ) {

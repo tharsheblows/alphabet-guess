@@ -1,7 +1,6 @@
 /**
  * WordPress dependencies
  */
-import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
 
 /**
@@ -12,10 +11,21 @@ import Settings from './settings';
 export default function Edit( props ) {
 	const blockProps = useBlockProps();
 
+	const { attributes } = props;
+	const { loseColor, lose } = attributes;
+
 	return (
 		<div { ...blockProps }>
 			<Settings { ...props } />
-			{ __( 'Characters – hello from the editor!', 'characters' ) }
+			<div className="ag-controller__wrapper">
+				<div
+					style={ { borderColor: loseColor } }
+					className="ag-controller ag-controller__results"
+				>
+					{ lose }
+				</div>
+			</div>
+
 		</div>
 	);
 }

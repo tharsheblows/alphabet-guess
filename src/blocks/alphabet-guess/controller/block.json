@@ -12,6 +12,7 @@
   "supports": {
     "interactivity": true
   },
+  "parent": [ "alphabet-guess/game", "core/column" ],
   "attributes": {
     "win": {
       "type": "string",
@@ -30,6 +31,7 @@
       "color": "#FF0000"
     }
   },
+  "usesContext": ["alphabet-guess/storeNamespace"],
   "textdomain": "characters",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",

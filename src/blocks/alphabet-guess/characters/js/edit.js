@@ -7,7 +7,7 @@ import { Button } from '@wordpress/components';
 /**
  * Internal dependencies
  */
-import { initialCharacters } from '../../../helpers/constants';
+import { initialCharacters } from '../../../../helpers/constants';
 
 export default function Edit() {
 	const blockProps = useBlockProps();

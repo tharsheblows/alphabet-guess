@@ -12,6 +12,8 @@
 	"supports": {
 		"interactivity": true
 	},
+  "usesContext": ["alphabet-guess/storeNamespace"],
+  "parent": [ "alphabet-guess/game", "core/column" ],
 	"textdomain": "characters",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
