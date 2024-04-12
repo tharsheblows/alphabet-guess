@@ -25,25 +25,33 @@ class BlockAlphabetGuess {
 	 * @param array $attrs An array of the attributes.
 	 * @return void
 	 */
-	public function initialize_state( array $attrs ) {
+	public function initialize_state( array $attrs ): void {
 		// Any initialization of state happens here. This is for all blocks.
-		$state = [];
+		$state  = [];
+		$to_add = $this->add_to_state();
 
+		// Mmmm this should be a schema? And then add attributes in the schema according to the rules.
 		foreach ( $attrs as $attr => $value ) {
-			switch ( $attr ) {
-				case 'winningCharacter':
-					$state[ $attr ] = $value;
-					break;
-				case 'characters':
-					$state[ $attr ] = $value;
-					break;
-				default:
-					break;
+			if ( in_array( $attr, $to_add, true ) ) {
+				$state[ $attr ] = $value;
 			}
 		}
 
 		if ( ! empty( $state ) && ! empty( $this->store_namespace ) ) {
 			wp_interactivity_state( $this->store_namespace, $state );
 		}
+	}
+
+	/**
+	 * An array of attributes to add to state.
+	 * This could be a schema but at the moment there's no need.
+	 *
+	 * @return array
+	 */
+	public function add_to_state(): array {
+		return [
+			'winningCharacter',
+			'characters',
+		];
 	}
 }
