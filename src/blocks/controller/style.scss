@@ -6,31 +6,16 @@
  */
 @import "../../css/variables";
 
-.ag-characters {
+.ag-controller {
 
-	&__list {
+	&__results {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		gap: 1em;
-	}
-
-	&__item {
-		padding: 1em;
-		flex-basis: auto;
-		background: var(--color-white);
-		border: 1px solid var(--color-grey-medium);
-		border-radius: var(--border-radius-light);
-	}
-
-	&__item--chosen {
-		border: 0;
-		background: var(--color-grey-light);
-		color: var(--color-grey-medium);
-		transition: all 0.5s;
-	}
-
-	&__item--chosen:focus {
-		outline: none;
+		align-content: center;
+		padding: 16px;
+		width: max-content;
+		font-size: 24px; // Seem to have to start this here.
+		border: 2px solid;
 	}
 }

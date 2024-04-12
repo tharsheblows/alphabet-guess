@@ -17,10 +17,13 @@ $left_id    = wp_unique_id( 'left-' );
 $chosen_id  = wp_unique_id( 'chosen-' );
 $characters = apply_filters( 'alphabet_guess_characters', range( 'A', 'Z' ) );
 
-wp_interactivity_state( 'alphabet-guess', [ 'initialCharacters' => $characters ] );
+$winning_character = $characters[ array_rand( $characters ) ];
+
+$state   = wp_interactivity_state( 'alphabet-guess', [ 'winningCharacter' => $winning_character ] );
 $context = wp_interactivity_data_wp_context(
 	[
-		'remainingCharacters' => $characters,
+		'characters'        => $characters,
+		'guessedCharacters' => [],
 	]
 );
 ?>
@@ -34,7 +37,7 @@ $context = wp_interactivity_data_wp_context(
 		id="<?php echo esc_attr( $left_id ); ?>"
 		class="ag-characters__list"
 	>
-		<template data-wp-each="state.initialCharacters" >
+		<template data-wp-each="context.characters" data-wp-watch="callbacks.disableOnWin">
 			<button
 				class="ag-characters__item"
 				data-wp-on--click="actions.guessCharacter"

@@ -13,6 +13,7 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 1em;
+		transition: 1s;
 	}
 
 	&__item {
@@ -28,6 +29,10 @@
 		background: var(--color-grey-light);
 		color: var(--color-grey-medium);
 		transition: all 0.5s;
+	}
+
+	&__item--correct {
+		background: var(--color-yellow);
 	}
 
 	&__item--chosen:focus {
