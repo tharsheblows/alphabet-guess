@@ -2,6 +2,17 @@
 
 Another stupid game where you guess a letter.
 
+## To run this
+
+1. run `nvm use` (or make sure you're using node v18.15.0)
+2. run `npm install`
+3. run `npm run build` – going straight to `npm run dev` doesn't build the `view.js` files correctly
+4. run `npm run dev`
+
+The site will be on [http://localhost:8888/](http://localhost:8888/)
+
+You can log in with the username "admin" and the password "password", it uses `wp-env`.
+
 ## Interesting things as I go along
 
 - Wow, if I set things up on my own I realise how much I've forgotten by using project templates and scaffolds.
