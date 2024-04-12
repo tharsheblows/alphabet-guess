@@ -1,6 +1,6 @@
 # Alphabet Game
 
-Another stupid game where you guess the letters. It's like password cracking except slower and more boring.
+Another stupid game where you guess a letter.
 
 ## Interesting things as I go along
 
