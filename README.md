@@ -4,7 +4,7 @@ Another stupid game where you guess a letter.
 
 For the love of all that is good, do not run this in a production environment, it's for learning how the WP Interactivity API works and playing around.
 
-There are two blocks to use: "Alphabet Guess" and "Scoreboard". "Alphabet Guess" is the game and "Scoreboard" keeps track of wins and losses so you can eg make a page full of games and put a scoreboard at the top so people can practice and keep track of their wins / losses.
+There are three blocks to use: "Alphabet Guess", "Alphabet Guess Scoreboard" and "Alphabet Guess Totals". "Alphabet Guess" is the game and "Scoreboard" and "Totals" keep track of wins and losses so you can eg make a page full of games and put a scoreboard at the top so people can practice and know how they're doing. "Scoreboard" has the individual game scores and "Totals" is the total wins / losses for all games.
 
 ## Important notes
 

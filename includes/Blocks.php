@@ -28,6 +28,7 @@ class Blocks {
 			'alphabet-guess/game',
 			'alphabet-guess/controller',
 			'counter/scoreboard',
+			'counter/totals',
 		];
 
 		foreach ( $blocks as $block ) {

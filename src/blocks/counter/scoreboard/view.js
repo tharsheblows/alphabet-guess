@@ -26,6 +26,9 @@ const { state, actions } = store( namespace, {
 				const item = countedItem[ 0 ];
 				item[ column ] = item[ column ] ? ++item[ column ] : 1;
 			}
+
+			const totalToIncrement = column === 'win' ? 'totalWins' : 'totalLosses';
+			++state[ totalToIncrement ];
 		},
 	},
 } );

@@ -50,7 +50,7 @@ abstract class Block {
 	 * @param string $block_dir_path The block path without a trailing slash.
 	 * @return string The namespace generated from the block name.
 	 */
-	public function get_namespace_from_block_meta( string $block_dir_path ): string {
+	public function get_namespace_from_block_json( string $block_dir_path ): string {
 		$metadata              = wp_json_file_decode( $block_dir_path . '/block.json' );
 		$namespace             = str_replace( '/', '-', $metadata->name );
 		$this->store_namespace = $namespace;

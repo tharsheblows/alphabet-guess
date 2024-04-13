@@ -8,7 +8,7 @@
 use Tharsheblows\AlphabetGuess\BlockCounter;
 
 $counter_block = new BlockCounter();
-$namespace     = $counter_block->get_namespace_from_block_meta( __DIR__ );
+$namespace     = $counter_block->get_namespace_from_block_json( __DIR__ );
 
 ?>
 

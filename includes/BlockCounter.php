@@ -21,6 +21,8 @@ class BlockCounter extends Block {
 	public function add_to_state(): array {
 		return [
 			'score',
+			'totalWins',
+			'totalLosses',
 		];
 	}
 }

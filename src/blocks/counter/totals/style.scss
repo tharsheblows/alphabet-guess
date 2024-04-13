@@ -1,4 +1,4 @@
-.counter-scoreboard {
+.counter-totals {
 
 	&__scores {
 		padding: 1em;
@@ -6,7 +6,7 @@
 
 	&__table {
 		display: grid;
-		grid-template-columns: 2fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		column-gap: 1em;
 		background: #fff;
 	}

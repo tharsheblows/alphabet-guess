@@ -1,13 +1,13 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "tharsheblows/counter-scoreboard",
+	"name": "tharsheblows/counter-totals",
 	"version": "0.1.0",
-	"title": "Alphabet Guess Scoreboard",
-  "keywords": [ "scoreboard", "count", "win", "lose"],
+	"title": "Alphabet Guess Totals",
+  "keywords": [ "scoreboard", "count", "win", "lose", "totals"],
 	"category": "widgets",
 	"icon": "media-interactive",
-	"description": "A scoreboard block to keep track of things you count",
+	"description": "A block to keep track of the totals of the things you count",
 	"example": {},
 	"supports": {
 		"interactivity": true
