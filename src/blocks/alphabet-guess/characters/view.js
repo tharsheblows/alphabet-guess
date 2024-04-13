@@ -45,8 +45,23 @@ namespaces.forEach( ( n ) => {
 
 				if ( chosen === state.winningCharacter ) {
 					ref.classList.add( 'ag-characters__item--correct' );
+					const block = ref.closest( '.ag-characters' );
+
+					const items = block.querySelectorAll( '.ag-characters__item' );
+
+					for ( const item of items ) {
+						item.removeAttribute( 'data-wp-on--click' );
+						item.setAttribute( 'disabled', '' );
+					}
+
+					const parentGame = document.getElementById( block.getAttribute( 'data-wp-interactive' ) );
+					parentGame.insertAdjacentHTML(
+						'afterend',
+						`<span class="visually-hidden" role="alert">You won! The correct letter was ${ chosen }`,
+					);
 				}
 
+				ref.setAttribute( 'disabled', '' );
 				const counterColumn = chosen === state.winningCharacter ? 'win' : 'lose';
 				const gameName = state.gameName || n;
 				scoreboardStore.actions.countEvents( gameName, counterColumn );
