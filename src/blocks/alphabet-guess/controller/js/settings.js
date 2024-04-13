@@ -16,7 +16,7 @@ export default function Settings( { attributes, setAttributes, clientId } ) {
 	return (
 		<InspectorControls>
 			<PanelBody
-				title={ __( 'Guess settings', 'tharsheblows-alphabet-game' ) }
+				title={ __( 'Result settings', 'tharsheblows-alphabet-game' ) }
 			>
 				<TextControl
 					label={ __( 'Win text', 'stream-picks-blocks' ) }

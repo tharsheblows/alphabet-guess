@@ -4,17 +4,22 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-@import "../../../css/variables";
 
-.ag-game {
-	&__wrapper {
+.counter-scoreboard {
+
+	&__scores {
 		padding: 1em;
 	}
 
-	&__name {
-		text-align: center;
-		font-size: 2em;
-		font-weight: 500;
-		margin-block: 0.5em;
+	&__table {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr;
+		column-gap: 1em;
+		background: #fff;
 	}
+
+	&__header {
+		font-weight: 700;
+	}
+
 }

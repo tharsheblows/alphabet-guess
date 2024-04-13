@@ -9,7 +9,8 @@ import { store, getContext } from '@wordpress/interactivity';
 import { getStoreNamespaces } from '../../../helpers/utils';
 import initialState from '../initial-state';
 
-const namespaces = getStoreNamespaces( 'alphabet-guess-game' );
+// This needs to be the classname from the parent block (see game/render.php ).
+const namespaces = getStoreNamespaces( 'namespace-alphabet-guess-game' );
 
 // Initialise the store for all namespaces.
 namespaces.forEach( ( n ) => {

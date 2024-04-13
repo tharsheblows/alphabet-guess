@@ -2,7 +2,7 @@
 /**
  * Render character block.
  *
- * @package alphabet-guess
+ * @package tharsheblows-alphabet-guess
  */
 
 /** @phpstan-ignore-next-line */

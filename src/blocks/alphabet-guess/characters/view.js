@@ -6,10 +6,12 @@ import { store, getContext, getElement } from '@wordpress/interactivity';
 /**
  * Internal dependencies
  */
+import scoreboardStore from '../../counter/scoreboard/view';
 import { getStoreNamespaces } from '../../../helpers/utils';
 import initialState from '../initial-state';
 
-const namespaces = getStoreNamespaces( 'alphabet-guess-game' );
+// This needs to be the classname from the parent block (see game/render.php ).
+const namespaces = getStoreNamespaces( 'namespace-alphabet-guess-game' );
 
 const initialCharacters = [
 	'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
@@ -44,6 +46,10 @@ namespaces.forEach( ( n ) => {
 				if ( chosen === state.winningCharacter ) {
 					ref.classList.add( 'ag-characters__item--correct' );
 				}
+
+				const counterColumn = chosen === state.winningCharacter ? 'win' : 'lose';
+				const gameName = state.gameName || n;
+				scoreboardStore.actions.countEvents( gameName, counterColumn );
 				state.currentGuess = ref.innerText;
 			},
 		},

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "alphabet-guess/characters",
+	"name": "tharsheblows/alphabet-guess-characters",
 	"version": "0.1.0",
 	"title": "Alphabet Guess Characters",
   "keywords": [ "alphabet", "guess", "game", "characters", "letters"],
@@ -13,7 +13,7 @@
 		"interactivity": true
 	},
   "usesContext": ["alphabet-guess/storeNamespace"],
-  "parent": [ "alphabet-guess/game", "core/column" ],
+  "parent": [ "alphabet-guess/game" ],
 	"textdomain": "characters",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

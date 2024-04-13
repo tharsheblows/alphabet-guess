@@ -8,3 +8,5 @@ export const getStoreNamespaces = ( wrapperClass ) => {
 
 	return namespaces;
 };
+
+export const getNamespaceFromBlockMeta = ( blockMetadata ) => blockMetadata.name.replace( '/', '-' );

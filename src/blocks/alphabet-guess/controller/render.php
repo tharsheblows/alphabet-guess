@@ -2,8 +2,10 @@
 /**
  * Render Controller block.
  *
- * @package alphabet-guess
+ * @package tharsheblows-alphabet-guess
  */
+
+use Tharsheblows\AlphabetGuess\BlockAlphabetGuess;
 
 /** @phpstan-ignore-next-line */
 $win_text  = $attributes['win'] ?? __( 'You win!', 'tharsheblows-alphabet-guess' );
@@ -14,6 +16,7 @@ $lose_colour = $attributes['loseColor'] ?? '#FF0000';
 
 /** @phpstan-ignore-next-line */
 $namespace = $block->context['alphabet-guess/storeNamespace'];
+
 
 $context = wp_interactivity_data_wp_context(
 	[

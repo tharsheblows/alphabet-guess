@@ -2,6 +2,13 @@
 
 Another stupid game where you guess a letter.
 
+For the love of all that is good, do not run this in a production environment, it's for learning how the WP Interactivity API works and playing around.
+
+## Important notes
+
+- 13 April 2024: I've updated the names and namespaces of all blocks so if you have a version previous to this, all your blocks will stop working.
+    - I've abstracted the generation of the namespaces because I spent over half an hour trying to debug an issue caused by the fact that I couldn't see the difference between the strings "counter-scoreboard" and "counter-scorecard" 🫠
+
 ## To run this
 
 1. run `nvm use` (or make sure you're using node v18.15.0)
@@ -22,6 +29,8 @@ You can log in with the username "admin" and the password "password", it uses `w
 - You can't use WP scripts in a module, error when trying to use `@wordpress/hooks` in view.js for the interactive block is: "Module not found: Error: Attempted to use WordPress script in a module: @wordpress/hooks, which is not supported yet."
 - For xDebug in vscode when using `wp-scripts` out of the box, map the `build` directory to `src` as the php files are copied over too
 - I have not tweaked the parent rules for the two internal game blocks, I can't be bothered at this point so it's possible to add them to a column block when they're not associated with a game. Just don't do that, it won't work.
+- I keep using `className` in php and wondering why my styles aren't working.
+- It took me half an hour to figure out I had a typo in one of the store namespaces. Find a place to put it for use by js and php.
 
 ## The matter of state
 

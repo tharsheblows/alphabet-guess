@@ -1,8 +1,8 @@
 <?php
 /**
- * Alphabet Guess
+ * Playing with the WP Interactivity API.
  *
- * @package           AlphabetGuess
+ * @package           tharsheblows-alphabet-guess
  * @author            Mary (JJ) Jay
  * @copyright         2024
  * @license           GPL-2.0-or-later

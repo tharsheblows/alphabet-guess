@@ -1,7 +1,7 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "alphabet-guess/controller",
+  "name": "tharsheblows/alphabet-guess-controller",
   "version": "0.1.0",
   "title": "Alphabet Guess Controller",
   "keywords": ["alphabet", "guess", "game", "characters", "letters", "controller"],
@@ -12,7 +12,7 @@
   "supports": {
     "interactivity": true
   },
-  "parent": [ "alphabet-guess/game", "core/column" ],
+  "parent": [ "alphabet-guess/game" ],
   "attributes": {
     "win": {
       "type": "string",

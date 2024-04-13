@@ -1,10 +1,17 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "alphabet-guess/game",
+  "name": "tharsheblows/alphabet-guess-game",
   "version": "0.1.0",
   "title": "Alphabet Guess Game",
-  "keywords": ["alphabet", "guess", "game", "characters", "letters", "controller"],
+  "keywords": [
+    "alphabet",
+    "guess",
+    "game",
+    "characters",
+    "letters",
+    "controller"
+  ],
   "category": "widgets",
   "icon": "media-interactive",
   "description": "The Alphabet Game",
@@ -13,18 +20,24 @@
     "interactivity": true
   },
   "attributes": {
-		"storeNamespace": {
-			"type": "string"
-		}
+    "storeNamespace": {
+      "type": "string"
+    },
+    "gameName": {
+      "type": "string",
+      "default": ""
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": ""
+    }
   },
   "textdomain": "tharsheblows-alphabet-guess",
   "providesContext": {
-		"alphabet-guess/storeNamespace": "storeNamespace"
+    "alphabet-guess/storeNamespace": "storeNamespace"
   },
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
-  "render": "file:./render.php",
-  "viewScriptModule": "file:./view.js"
-
+  "render": "file:./render.php"
 }

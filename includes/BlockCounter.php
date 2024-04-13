@@ -10,7 +10,7 @@ namespace Tharsheblows\AlphabetGuess;
 /**
  * The Enqueue class.
  */
-class BlockAlphabetGuess extends Block {
+class BlockCounter extends Block {
 
 	/**
 	 * An array of attributes to add to state.
@@ -20,9 +20,7 @@ class BlockAlphabetGuess extends Block {
 	 */
 	public function add_to_state(): array {
 		return [
-			'winningCharacter',
-			'characters',
-			'gameName',
+			'score',
 		];
 	}
 }
