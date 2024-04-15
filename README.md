@@ -1,6 +1,6 @@
 # Alphabet Game
 
-Another stupid game where you guess a letter.
+Another stupid game where you guess a letter. [There is an sample page here.](https://porchy.co.uk/the-alphabet-game)
 
 For the love of all that is good, do not run this in a production environment, it's for learning how the WP Interactivity API works and playing around.
 
@@ -36,6 +36,6 @@ You can log in with the username "admin" and the password "password", it uses `w
 
 ## The matter of state
 
-It's bothering me that it's all over the place! Also how do I put more than one of the same block on the page? Both of these can be solved -- and we'll see if this is a decent solution or not, I don't know -- by creating a parent block and having the guts of the game be child blocks. I'll make it so that you can add any other blocks in there but let's give this a go.
+~~It's bothering me that it's all over the place! Also how do I put more than one of the same block on the page? Both of these can be solved -- and we'll see if this is a decent solution or not, I don't know -- by creating a parent block and having the guts of the game be child blocks. I'll make it so that you can add any other blocks in there but let's give this a go.~~
 
-So this does work. The guts of adding in the stores for more than one block are in `src/helpers/utils.js`. State necessary for js is in `src/blocks/alphabet-guess/initial-state.js` which keeps that as one source and then the dynamically added state can be done using `BlockAlphabetGuess->initialize_state( $namespace, $state )`
+So that did work. The guts of adding in the stores for more than one block are in `src/helpers/utils.js`. State necessary for js is in `src/blocks/alphabet-guess/initial-state.js` which keeps that as one source and then the dynamically added state can be done using `BlockAlphabetGuess->initialize_state( $namespace, $state )`

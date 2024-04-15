@@ -5,9 +5,6 @@
  * @package tharsheblows-alphabet-guess
  */
 
-use Tharsheblows\AlphabetGuess\BlockAlphabetGuess;
-
-/** @phpstan-ignore-next-line */
 $win_text  = $attributes['win'] ?? __( 'You win!', 'tharsheblows-alphabet-guess' );
 $lose_text = $attributes['lose'] ?? __( 'You lose!', 'tharsheblows-alphabet-guess' );
 
