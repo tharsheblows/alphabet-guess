@@ -2,6 +2,7 @@ parameters:
   level: 8
   checkMissingIterableValueType: false
   paths:
+    - plugin.php
     - includes/
     - src/blocks/
   excludePaths:

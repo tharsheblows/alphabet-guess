@@ -8,6 +8,7 @@
 	<!-- Include -->
 	<file>./includes</file>
 	<file>./src/blocks</file>
+	<file>./plugin.php</file>
 
 	<!-- Exclude -->
 	<exclude-pattern>node_modules</exclude-pattern>
